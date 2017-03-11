@@ -3,7 +3,7 @@
 import React from "react"
 import ActionCreator from "./ActionCreator"
 import Store from "./Store"
-import EventEmitter from "./EventEmitter"
+import EventEmitter from "events"
 
 var dispatcher = new EventEmitter();
 var action = new ActionCreator(dispatcher);

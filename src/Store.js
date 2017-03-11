@@ -1,6 +1,6 @@
 // LICENSE : MIT
 "use strict";
-import Emitter from "./EventEmitter"
+import Emitter from "events"
 class Store extends Emitter {
     constructor(dispatcher) {
         super();

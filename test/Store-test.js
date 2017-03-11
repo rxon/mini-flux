@@ -2,7 +2,7 @@
 "use strict";
 import assert from "power-assert"
 import Store from "../src/Store"
-import EventEmitter from "../src/EventEmitter"
+import EventEmitter from "events"
 describe("Store", function () {
     var instance;
     var dispatcher;

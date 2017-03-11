@@ -2,7 +2,7 @@
 "use strict";
 import assert from "power-assert"
 import ActionCreator from "../src/ActionCreator"
-import EventEmitter from "../src/EventEmitter"
+import EventEmitter from "events"
 describe("ActionCreator", function () {
     var dispatcher;
     var action;

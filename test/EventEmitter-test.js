@@ -1,7 +1,7 @@
 // LICENSE : MIT
 "use strict";
 import assert from "power-assert"
-import EventEmitter from "../src/EventEmitter"
+import EventEmitter from "events"
 describe("EventEmitter", function () {
     var emitter;
     beforeEach(function () {
@@ -27,14 +27,14 @@ describe("EventEmitter", function () {
             emitter.emit(key, passingData)
         });
     });
-    describe("#off", function () {
+    describe("#removeListener", function () {
         it("should unset event handler ", function (done) {
             var key = "event-key";
             var handler = function () {
                 done(new Error("should not called"))
             };
             emitter.on(key, handler);
-            emitter.off(key, handler);
+            emitter.removeListener(key, handler);
             emitter.emit(key);
             emitter.on(key, done);
             emitter.emit(key);
